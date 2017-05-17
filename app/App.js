@@ -8,8 +8,10 @@ import './style/App.less';
 
 class App extends Component{
   render(){
+    let obj = {a:1};
+    let obj2 = { ...obj, b: 1};
     return (
-      <p>hello world!</p>
+      <p>{JSON.stringify(obj2)}</p>
     );
   }
 }
