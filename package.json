@@ -4,7 +4,7 @@
   "description": "react-redux-router-webpack",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_ENV=dev webpack-dev-server --progress --colors --port 8888",
+    "start": "NODE_ENV=dev webpack-dev-server --progress --colors --port 8686",
     "build": "rm -rf ./build && NODE_ENV=production webpack --config ./webpack.product.config.js --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -35,6 +35,7 @@
     "less-loader": "^4.0.3",
     "open-browser-webpack-plugin": "0.0.5",
     "postcss-loader": "^2.0.5",
+    "react-transform-hmr": "^1.0.4",
     "style-loader": "^0.17.0",
     "url-loader": "^0.5.8",
     "webpack": "^2.5.1",

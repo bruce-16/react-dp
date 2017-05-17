@@ -1,13 +1,9 @@
-import React,{Component} from 'react';
+/**
+ * 此文件只做做简单的渲染操作,入口文件为App.js
+ */
+import React from 'react';
 import {render} from 'react-dom';
-import './style/index.less';
-
-
-const App = () => (
-  <p>hello react!</p>
-);
-
-
+import App from './App';
 
 render(
   <App/>,

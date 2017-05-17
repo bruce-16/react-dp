@@ -105,7 +105,7 @@ module.exports = {
 
     // 打开浏览器
     new OpenBrowserPlugin({
-      url: 'http://localhost:8888'
+      url: 'http://localhost:8686'
     })
 
 
