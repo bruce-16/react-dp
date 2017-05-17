@@ -1,0 +1,2 @@
+/*! Copyright by zachrey@github.com. */
+webpackJsonp([0],{77:function(e,t){},78:function(e,t,n){"use strict";var u=n(29),l=function(e){return e&&e.__esModule?e:{default:e}}(u),r=n(28);n(77);var c=function(){return l.default.createElement("p",null,"hello react!")};(0,r.render)(l.default.createElement(c,null),document.getElementById("root"))}},[78]);

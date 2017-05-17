@@ -1,10 +1,10 @@
 import React,{Component} from 'react';
 import {render} from 'react-dom';
-import './style/index.css';
+import './style/index.less';
 
 
 const App = () => (
-  <p>hello world!</p>
+  <p>hello react!</p>
 );
 
 
