@@ -91,6 +91,10 @@ module.exports = {
     //webpack里面的loader添加插件
     new webpack.LoaderOptionsPlugin({
       options: {
+
+        //这里的postcss配置放在了根目录下,文件为postcss.config.js
+
+        
         //添加postcss-loader的插件
         // postcss: function() {
         //   return [
