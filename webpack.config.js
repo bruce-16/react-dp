@@ -92,13 +92,13 @@ module.exports = {
     new webpack.LoaderOptionsPlugin({
       options: {
         //添加postcss-loader的插件
-        postcss: function() {
-          return [
-            require('autoprefixer')({
-              browsers: ['ie>=8', '>1% in CN']
-            })
-          ];
-        }
+        // postcss: function() {
+        //   return [
+        //     require('autoprefixer')({
+        //       browsers: ['ie>=8', '>1% in CN']
+        //     })
+        //   ];
+        // }
 
         /*eslint: function(){
          configFile: '.eslintrc' // Rules for eslint
