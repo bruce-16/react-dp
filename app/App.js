@@ -1,4 +1,6 @@
 import React,{Component} from 'react';
+import {Provider} from 'react-redux';
+import storeConfigure from './store/storeConfig';
 import './style/App.less';
 /**
  * 以后在这里配置
@@ -16,4 +18,8 @@ class App extends Component{
   }
 }
 
-export default App;
+export default () => (
+  <Provider  store={storeConfigure()}>
+    <App/>
+  </Provider>
+);
