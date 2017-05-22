@@ -3,11 +3,9 @@
  */
 
 import {combineReducers} from 'redux';
+import {userInfo} from './userInfo';
 
-function test(state = 'test', action){
-  return state;
-}
 
 export default combineReducers({
-  test
+  userInfo
 });
