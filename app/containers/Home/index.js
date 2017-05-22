@@ -17,7 +17,7 @@ class Home extends Component{
 }
 
 const mapStateMapProps = state => ({
-  test: state.test
+  test: state.userInfo.cityName ? state.userInfo.cityName : ''
 });
 
 export default connect(mapStateMapProps)(Home);

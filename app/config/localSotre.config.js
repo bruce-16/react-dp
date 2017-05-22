@@ -1,3 +1,1 @@
-/**
- * Created by administrator on 2017/5/22.
- */
+export const CITYNAME = 'CITY_NAME';
