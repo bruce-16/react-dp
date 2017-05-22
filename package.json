@@ -5,8 +5,6 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=dev webpack-dev-server --progress --colors --port 8686",
-//    window 环境配置:"start": "set NODE_ENV=dev && webpack-dev-server --progress --colors --port 8686"
-//    window 环境配置:"build": "rd/s/q ./build && set NODE_ENV=production && webpack --config ./webpack.product.config.js --progress --colors"
     "build": "rm -rf ./build && NODE_ENV=production webpack --config ./webpack.product.config.js --progress --colors",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
