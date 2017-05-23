@@ -26,7 +26,6 @@ module.exports = {
     }, {
       //css文件导入
       test: /\.css$/,
-      exclude: /node_modules/,
       include: /app/,
       use: [{
         loader: 'style-loader'
@@ -78,12 +77,18 @@ module.exports = {
         options: {
           //
           limit: 5000,
-          name: 'assets/[name]-[hash:5].[ext]'
+          name: '[name]-[hash:5].[ext]'
         }
       }/*, {
         //压缩图片文件
         loader: 'image-webpack-loader'
       }*/]
+    }, {
+      test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      loader: "url-loader?limit=10000&mimetype=application/font-woff"
+    }, {
+      test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+      loader: "file-loader"
     }]
   },
 
