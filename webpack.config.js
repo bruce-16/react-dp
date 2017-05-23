@@ -39,25 +39,11 @@ module.exports = {
       }, {
         loader: 'postcss-loader'
       }]
-    }, {
-      //less文件 ， sass（scss）文件类似
-      //loader的顺序是从下往上，也就是less先执行，最后执行style
-      test: /\.less$/,
-      include: path.resolve(__dirname, 'style'),
-      use: [{
-        loader: 'style-loader'
-      }, {
-        loader: 'css-loader'
-      }, {
-        loader: 'postcss-loader'
-      }, {
-        loader: 'less-loader'
-      }]
     },{
       //less文件 ， sass（scss）文件类似
       //loader的顺序是从下往上，也就是less先执行，最后执行style
       test: /\.less$/,
-      exclude: [path.resolve(__dirname, 'node_modules'), path.resolve(__dirname, 'style')],
+      exclude: [path.resolve(__dirname, 'node_modules'), path.resolve(__dirname, 'app/style')],
       use: [{
         loader: 'style-loader'
       }, {
@@ -65,6 +51,20 @@ module.exports = {
         options:{
           modules: true
         }
+      }, {
+        loader: 'postcss-loader'
+      }, {
+        loader: 'less-loader'
+      }]
+    }, {
+      //less文件 ， sass（scss）文件类似
+      //loader的顺序是从下往上，也就是less先执行，最后执行style
+      test: /\.less$/,
+      include: path.resolve(__dirname, 'app/style'),
+      use: [{
+        loader: 'style-loader'
+      }, {
+        loader: 'css-loader'
       }, {
         loader: 'postcss-loader'
       }, {
