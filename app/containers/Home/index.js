@@ -12,14 +12,18 @@ class Home extends Component{
   render(){
     return (
       <div>
-        <HomeHeader/>
+        <HomeHeader
+          cityName={this.props.cityName}
+          onSearchClick={() => {}}
+          onCitySelectClick={() => {}}
+        />
       </div>
     );
   }
 }
 
 const mapStateMapProps = state => ({
-  test: state.userInfo.cityName ? state.userInfo.cityName : ''
+  cityName: state.userInfo.cityName
 });
 
 export default connect(mapStateMapProps)(Home);

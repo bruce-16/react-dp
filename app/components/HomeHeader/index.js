@@ -1,9 +1,17 @@
 import React,{Component} from 'react';
 import PureMixinRender from 'react-addons-pure-render-mixin';
 import classnames from 'classnames';
-import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
 import styles from './styles.less';
+
+
 class HomeHeader extends Component{
+  static propTypes = {
+    cityName: PropTypes.string.isRequired,
+    onSearchClick: PropTypes.func.isRequired,
+    onCitySelectClick: PropTypes.func.isRequired
+  };
+  
   constructor(props, context){
     super(props, context);
     this.shouldComponentUpdate = PureMixinRender.shouldComponentUpdate;
@@ -43,11 +51,4 @@ class HomeHeader extends Component{
     );
   }
 }
-
-const mapStateToProps = state => ({
-  cityName: state.userInfo.cityName
-});
-
-const reduxApp = connect(mapStateToProps)(HomeHeader);
-
-export default reduxApp;
+export default HomeHeader;
