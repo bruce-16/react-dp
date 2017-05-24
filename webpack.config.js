@@ -20,9 +20,6 @@ module.exports = {
       exclude: /node_modules/,
       include: /app/,
       loader: "babel-loader",
-      options: {
-        presets: ["env"]
-      }
     }, {
       //css文件导入
       test: /\.css$/,
