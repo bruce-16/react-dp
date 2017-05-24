@@ -1,9 +1,11 @@
 import React,{Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
-import styles from './styles.less';
+
 
 import HomeHeader from '../../components/HomeHeader';
+import Category from '../../components/Category';
+
 class Home extends Component{
   constructor(props, context){
     super(props, context);
@@ -17,6 +19,7 @@ class Home extends Component{
           onSearchClick={() => {}}
           onCitySelectClick={() => {}}
         />
+        <Category/>
       </div>
     );
   }
