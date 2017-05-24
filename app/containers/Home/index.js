@@ -2,7 +2,8 @@ import React,{Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {connect} from 'react-redux';
 import styles from './styles.less';
-import '../../style/App.less';
+
+import HomeHeader from '../../components/HomeHeader';
 class Home extends Component{
   constructor(props, context){
     super(props, context);
@@ -11,7 +12,7 @@ class Home extends Component{
   render(){
     return (
       <div>
-        <p className={styles.root + ' ' + 'root2'}>Home:{this.props.test}</p>
+        <HomeHeader/>
       </div>
     );
   }
