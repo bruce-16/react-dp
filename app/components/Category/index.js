@@ -24,7 +24,7 @@ class Category extends Component{
 
   render(){
     let option = {
-      // auto: 2500,
+      auto: 2500,
       callback: function(index){
         this.setState({index});
       }.bind(this)
