@@ -5,7 +5,7 @@ import {connect} from 'react-redux';
 
 import HomeHeader from '../../components/HomeHeader';
 import Category from '../../components/Category';
-
+import Ad from './subPage/ad';
 class Home extends Component{
   constructor(props, context){
     super(props, context);
@@ -20,6 +20,8 @@ class Home extends Component{
           onCitySelectClick={() => {}}
         />
         <Category/>
+        <div style={{height: '15px', background: '#eee'}}>{/* 分割线 */}</div>
+        <Ad/>
       </div>
     );
   }
