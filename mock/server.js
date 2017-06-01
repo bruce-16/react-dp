@@ -14,7 +14,7 @@ router.get('/api/homead',(ctx, next) => {
 const homeListData = require('./home/list.js')
 router.get('/api/homelist/:city/:page', (ctx, next) => {
     // 参数
-    const params = this.params;
+    const params = ctx.params;
     const paramsCity = params.city;
     const paramsPage = params.page;
 
