@@ -12,22 +12,25 @@ class Ad extends Component{
   }
 
   componentDidMount(){
-    const res = get('/api/homead');
-    res.then( text => {
-      return text.json();
-    }).then( json => {
+    this.getData();
+  }
+
+  async getData(){
+    try {
+      const res = await get('/api/homead');
+      const json = await res.json();
       let data = json;
       if(data.length){
         this.setState({
           data
         });
       }
-    }).catch(e => {
+    } catch (error) {
       // 发生错误
       if (__DEV__) {
-          console.error('首页广告模块获取数据报错, ', ex.message)
+          console.error('首页广告模块获取数据报错, ', error.message)
       }
-    })
+    }
   }
 
   render(){
