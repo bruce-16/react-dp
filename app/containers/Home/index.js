@@ -24,6 +24,7 @@ class Home extends Component{
         <div style={{height: '15px', background: '#eee'}}>{/* 分割线 */}</div>
         <Ad/>
         <List cityName={this.props.cityName}/>
+        <div style={{height: '20px', background: '#eee'}}>{/* 分割线 */}</div>
       </div>
     );
   }

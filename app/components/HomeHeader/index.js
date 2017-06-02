@@ -42,7 +42,7 @@ class HomeHeader extends Component{
         </div>
         <div className={inputContainer} onClick={ () => {this.onSearchClick()}}>
           <i className="fa fa-search" style={{color: '#333',marginBottom: 5}}/>
-          <input type="text" className={input} placeholder="请输入搜索内容" style={{height: '80%'}} disabled/>
+          <input type="text" className={input} placeholder="请输入搜索内容" style={{height: '80%',marginLeft: 2}} disabled/>
         </div>
         <div className={leftAndRight} >
           <i className="fa fa-user" style={{fontSize: 28}}/>
