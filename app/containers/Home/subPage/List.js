@@ -1,7 +1,7 @@
 import React,{Component} from 'react';
 import PureRenderMixin from 'react-addons-pure-render-mixin';
 import {get} from '../../../fetch/get';
-
+import ListComponent from '../../../components/ListComponent'
 class List extends Component{
   constructor(props, context){
     super(props, context);
@@ -38,7 +38,12 @@ class List extends Component{
   render(){
     return (
       <div>
-        {this.state.data.length}
+        <h2 className="home-list-title">猜你喜欢</h2>
+        {
+          this.state.data.length 
+          ?<ListComponent data={this.state.data}/>
+          :'加载中...'
+        }
       </div>
     );
   }
