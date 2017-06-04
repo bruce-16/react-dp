@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import PureMixinRender from 'react-addons-pure-render-mixin';
+import { Link } from 'react-router-dom'
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 import styles from './styles.less';
@@ -35,11 +36,13 @@ class HomeHeader extends Component{
     let input = classnames("flex flex-1", styles.input);
     return (
       <div className={root}>
-        <div className={leftAndRight}>
-          <span>{this.props.cityName}</span>
-          {' '}
-          <i className="fa fa-angle-down" style={{marginLeft: 5}}/>
-        </div>
+        <Link  to="/city">
+          <div className={leftAndRight}>
+            <span>{this.props.cityName}</span>
+            {' '}
+            <i className="fa fa-angle-down" style={{marginLeft: 5}}/>
+          </div>
+        </Link>
         <div className={inputContainer} onClick={ () => {this.onSearchClick()}}>
           <i className="fa fa-search" style={{color: '#333',marginBottom: 5}}/>
           <input type="text" className={input} placeholder="请输入搜索内容" style={{height: '80%',marginLeft: 2}} disabled/>

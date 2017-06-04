@@ -40,7 +40,7 @@ class LoadMore extends Component{
 
   componentWillUnmount() {
     //当组件被卸载后，应该取消window上的事件
-    window.removeEventListener('scroll');
+    window.removeEventListener('scroll',() => {});
   }
 
   render(){
