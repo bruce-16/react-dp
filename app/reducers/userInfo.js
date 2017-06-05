@@ -5,7 +5,11 @@ let initialState = {};
 export function userInfo(state = initialState, action){
   switch (action.type){
     case actionTypes.USER_INFO_LOGIN :
-      return action.data;
+      let newData = action.data;
+      return {
+        ...state,
+        ...newData
+      };
     default :
       return state;
   }
