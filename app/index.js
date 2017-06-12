@@ -4,7 +4,7 @@
 import React from 'react';
 import {render} from 'react-dom';
 import App from './App';
-require('Font-awesome-webpack');
+require('font-awesome-webpack');
 render(
   <App/>,
   document.getElementById('root')
